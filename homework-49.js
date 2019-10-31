@@ -40,10 +40,10 @@ class CustomPromise {
 let test = new CustomPromise(function(resolve, reject) {
   console.log("1. Запускаю таймер на 3 сек");
   setTimeout(() => {
+    reject("error");    
     console.log("2. Я подождал 3 cекунды и отдаю значение 5 в Валью");
     console.log("3. Я Вызываю резолв и отдаю в него цифру 5");
     resolve(5);
-    reject("error");
   }, 3000);
 });
 
@@ -60,6 +60,7 @@ test.then(response => {
   return response;
 });
 test.catch(response => {
-  console.log("Произошла ошибка");
-  response = new Error("Произошла ошибка");
+  // console.log("Произошла ошибка");
+  response = new Error('Произошла ошибка!!!');
+  console.log(response);
 });
