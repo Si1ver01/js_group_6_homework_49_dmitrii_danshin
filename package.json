@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "task-2.js",
   "dependencies": {
-    "figlet": "^1.2.4"
+    "figlet": "^1.11.3"
   },
   "devDependencies": {},
   "scripts": {
